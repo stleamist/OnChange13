@@ -1,15 +1,21 @@
 import XCTest
 @testable import OnChange13
 
+import SwiftUI
+
 final class OnChange13Tests: XCTestCase {
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct
-        // results.
-        XCTAssertEqual(OnChange13().text, "Hello, World!")
+    
+    func test1() {
+        let value1: String? = nil
+        let value2: Int = 0
+        XCTAssertEqual(AnyEquatable(value1) == AnyEquatable(value2), false)
+        XCTAssertEqual(AnyEquatable(value2) == AnyEquatable(value1), false)
     }
 
-    static var allTests = [
-        ("testExample", testExample),
-    ]
+    func test2() {
+        let value1: Int? = nil
+        let value2: Int?? = nil
+        XCTAssertEqual(AnyEquatable(value1) == AnyEquatable(value2), true)
+        XCTAssertEqual(AnyEquatable(value2) == AnyEquatable(value1), true)
+    }
 }

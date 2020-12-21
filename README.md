@@ -1,3 +1,3 @@
 # OnChange13
 
-A description of this package.
+A polypill of SwiftUI [`.onChange(of:perform:)`](https://developer.apple.com/documentation/swiftui/view/onchange(of:perform:)) modifier for iOS 13.
